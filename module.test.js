@@ -95,6 +95,9 @@ test('Testing containsnumbers (only characters no letters/numbers) -- success', 
     expect(got).toBe(expected);
 });
 
+// my test case passes for the bug
+// the bug was if there is an empty string with spaces, it considered it as 0, and returned true
+// now it does not do that because i put a !== condition for checking this, hence this test passes
 test('Testing containsnumbers (testing for the bug) -- success', () => {
     const expected = false;
     const got = mut.containsNumbers("   ");
