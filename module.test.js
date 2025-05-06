@@ -1,5 +1,11 @@
 import mut from './module.js'; // MUT = Module Under Test
 
+test('Testing sum -- success', () => {
+    const expected = 30;
+    const got = mut.sum(12, 18);
+    expect(got).toBe(expected);
+});
+
 test('Testing div (positive integers) -- success', () => {
     const expected = 10;
     const got = mut.div(30, 3);
@@ -88,7 +94,6 @@ test('Testing containsnumbers (only characters no letters/numbers) -- success', 
     const got = mut.containsNumbers("!@#$%%^&");
     expect(got).toBe(expected);
 });
-
 
 test('Testing containsnumbers (testing for the bug) -- success', () => {
     const expected = false;
